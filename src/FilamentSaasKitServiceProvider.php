@@ -99,11 +99,21 @@ class FilamentSaasKitServiceProvider extends PackageServiceProvider
      */
     protected function getAssets(): array
     {
-        return [
-            // AlpineComponent::make('filament-saas-kit', __DIR__ . '/../resources/dist/components/filament-saas-kit.js'),
-            Css::make('filament-saas-kit-styles', __DIR__ . '/../resources/dist/filament-saas-kit.css'),
-            Js::make('filament-saas-kit-scripts', __DIR__ . '/../resources/dist/filament-saas-kit.js'),
-        ];
+        $assets = [];
+
+        $cssPath = __DIR__ . '/../resources/dist/filament-saas-kit.css';
+        $jsPath = __DIR__ . '/../resources/dist/filament-saas-kit.js';
+
+        // Only register assets if they exist
+        if (file_exists($cssPath)) {
+            $assets[] = Css::make('filament-saas-kit-styles', $cssPath);
+        }
+
+        if (file_exists($jsPath)) {
+            $assets[] = Js::make('filament-saas-kit-scripts', $jsPath);
+        }
+
+        return $assets;
     }
 
     /**
