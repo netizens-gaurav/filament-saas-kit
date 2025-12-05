@@ -1,29 +1,27 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "netizens/filament-saas-kit",
+    "description": "A modular, extensible SaaS foundation plugin for Filament v4 using a shared-database tenancy model.It ships with production-ready building blocks including organizations, teams, RBAC, subscription/billing scaffolding, audit logs, feature flags, API keys, notifications, onboarding workflows, workspace switching, and app-wide settings — all implemented using native Filament patterns.Perfect for developers who want a scalable, maintainable, and modern starting point for building real SaaS applications on Laravel + Filament with clean service/repository architecture.",
     "keywords": [
-        ":vendor_name",
+        "netizens",
         "laravel",
-        ":package_slug"
+        "filament-saas-kit"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/netizens/filament-saas-kit",
     "support": {
-        "issues": "https://github.com/:vendor_slug/:package_slug/issues",
-        "source": "https://github.com/:vendor_slug/:package_slug"
+        "issues": "https://github.com/netizens/filament-saas-kit/issues",
+        "source": "https://github.com/netizens/filament-saas-kit"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Gaurav Vaishnav",
+            "email": "gaurav.v@netizens.email",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.1",
         "filament/filament": "^3.0",
-        "filament/forms": "^3.0",
-        "filament/tables": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0"
     },
     "require-dev": {
@@ -41,13 +39,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Netizens\\FilamentSaasKit\\": "src/",
+            "Netizens\\FilamentSaasKit\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Netizens\\FilamentSaasKit\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -67,10 +65,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Netizens\\FilamentSaasKit\\FilamentSaasKitServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "FilamentSaasKit": "Netizens\\FilamentSaasKit\\Facades\\FilamentSaasKit"
             }
         }
     },
