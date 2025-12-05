@@ -3,7 +3,12 @@
     "description": "A modular, extensible SaaS foundation plugin for Filament v4 using a shared-database tenancy model.It ships with production-ready building blocks including organizations, teams, RBAC, subscription/billing scaffolding, audit logs, feature flags, API keys, notifications, onboarding workflows, workspace switching, and app-wide settings — all implemented using native Filament patterns.Perfect for developers who want a scalable, maintainable, and modern starting point for building real SaaS applications on Laravel + Filament with clean service/repository architecture.",
     "keywords": [
         "netizens",
+        "filament",
         "laravel",
+        "saas",
+        "tenancy",
+        "multi-tenant",
+        "filament-plugin",
         "filament-saas-kit"
     ],
     "homepage": "https://github.com/netizens/filament-saas-kit",
@@ -20,22 +25,22 @@
         }
     ],
     "require": {
-        "php": "^8.1",
-        "filament/filament": "^3.0",
-        "spatie/laravel-package-tools": "^1.15.0"
+        "php": "^8.2",
+        "illuminate/support": "^12.0",
+        "filament/filament": "^4.1",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "laravel/pint": "^1.0",
-        "nunomaduro/collision": "^7.9",
-        "nunomaduro/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.0",
-        "pestphp/pest": "^2.1",
-        "pestphp/pest-plugin-arch": "^2.0",
-        "pestphp/pest-plugin-laravel": "^2.0",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "spatie/laravel-ray": "^1.26"
+        "nunomaduro/collision": "^8.0",
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-arch": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -53,7 +58,7 @@
         "analyse": "vendor/bin/phpstan analyse",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
+        "pint": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
